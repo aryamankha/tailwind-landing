@@ -32,7 +32,7 @@ function HeroHome() {
   };
 
   return (
-    <section className="relative dark:bg-slate-800">
+    <section className="relative">
       {/* Illustration behind hero content */}
       <div
         className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none"
@@ -64,7 +64,7 @@ function HeroHome() {
         </svg>
       </div>
 
-      <div className="max-w-7xl h-screen mx-auto px-8 justify-center sm:justify-start sm:px-10">
+      <div className="max-w-7xl md:h-screen mx-auto px-8 justify-center sm:justify-start sm:px-10">
         {/* Hero content */}
         <div className="flex h-screen items-center flex-col lg:flex-row gap-16 pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Section header */}
