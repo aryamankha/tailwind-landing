@@ -22,7 +22,7 @@ function Features() {
   }, [tab]);
 
   return (
-    <section className="relative h-screen">
+    <section className="relative md:h-screen ">
       {/* Section background (needs .relative class on parent and next sibling elements) */}
       <div
         className="absolute inset-0 bg-gray-100 dark:bg-slate-600 pointer-events-none mb-16"
