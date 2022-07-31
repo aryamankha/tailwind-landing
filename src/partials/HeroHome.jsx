@@ -39,11 +39,11 @@ function HeroHome() {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl h-screen mx-auto px-8 justify-center sm:justify-start sm:px-10">
         {/* Hero content */}
-        <div className="flex flex-col md:flex-row gap-16 pt-32 pb-12 md:pt-40 md:pb-20">
+        <div className="flex h-screen items-center flex-col lg:flex-row gap-16 pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Section header */}
-          <div className="text-left pb-12 md:pb-16 items-center">
+          <div className="text-center sm:text-left pb-12 md:pb-16 items-center">
             <h1
               className="text-4xl md:text-[4.5rem] font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
@@ -99,8 +99,8 @@ function HeroHome() {
                 <img
                   className="mx-auto"
                   src={HeroImage}
-                  width="768"
-                  height="432"
+                  width="900"
+                  height="900"
                   alt="Hero"
                 />
                 <svg
