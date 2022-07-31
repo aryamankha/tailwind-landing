@@ -5,9 +5,34 @@ import HeroImage from "../images/hero-image.png";
 
 function HeroHome() {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const scriptUrl =
+    "https://script.google.com/macros/s/AKfycbwmDlr93PdYdyIANtMMTugTCJSuuCa39hvJ0vblPiyg2QjRF2JoWIrFJhnjqQ24f2XRZg/exec";
+
+  function EmailMessage(props) {
+    const emailSubmitted = props.emailSubmitted;
+    if (emailSubmitted) {
+      return (
+        <p className="text-sm text-gray-400 mt-3"> We'll keep you posted! </p>
+      );
+    }
+    return (
+      <p className="text-sm text-gray-400 mt-3">
+        {" "}
+        Be the first to hear about everything Vivid.{" "}
+      </p>
+    );
+  }
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(email);
+  };
 
   return (
-    <section className="relative">
+    <section className="relative dark:bg-slate-800">
       {/* Illustration behind hero content */}
       <div
         className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none"
@@ -43,9 +68,9 @@ function HeroHome() {
         {/* Hero content */}
         <div className="flex h-screen items-center flex-col lg:flex-row gap-16 pt-32 pb-12 md:pt-40 md:pb-20">
           {/* Section header */}
-          <div className="text-center sm:text-left pb-12 md:pb-16 items-center">
+          <div className="text-center  md:text-left pb-12 md:pb-16 items-center">
             <h1
-              className="text-4xl md:text-[4.5rem] font-extrabold leading-tighter tracking-tighter mb-4"
+              className="text-4xl dark:text-white md:text-[4.5rem] font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
               Build{" "}
@@ -54,7 +79,7 @@ function HeroHome() {
               </span>
             </h1>
             <h1
-              className="text-4xl md:text-[4.5rem] font-extrabold leading-tighter tracking-tighter mb-4"
+              className="text-4xl  dark:text-white md:text-[4.5rem] font-extrabold leading-tighter tracking-tighter mb-4"
               data-aos="zoom-y-out"
             >
               Code{" "}
@@ -76,14 +101,34 @@ function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay="300"
               >
-                <div>
-                  <a
-                    className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto"
-                    href="#0"
-                  >
-                    Sign up for our waitlist
-                  </a>
-                </div>
+                {/* CTA form */}
+                <form
+                  name="googleSheetsSubmit"
+                  className="w-full"
+                  onSubmit={submitHandler}
+                  method="post"
+                >
+                  <div className="flex flex-col sm:flex-row justify-center sm:justify-start max-w-xs mx-auto sm:max-w-lg lg:mx-0">
+                    <input
+                      type="email"
+                      className="form-input w-full appearance-none bg-slate-50 border border-slate-200 focus:border-slate-400 rounded-lg px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-slate-500 placeholder-gray-500"
+                      placeholder="Your email…"
+                      aria-label="Your email…"
+                      name="email"
+                      onChange={(event) => setEmail(event.target.value)}
+                    />
+                    <button
+                      onClick={() => setEmailSubmitted(true)}
+                      type="submit"
+                      className="btn rounded-lg ml-2 text-white bg-black hover:bg-blue-600 shadow"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                  {/* Success message */}
+                  {/* <p className="text-sm text-gray-400 mt-3">Thanks for subscribing!</p> */}
+                  <EmailMessage emailSubmitted={emailSubmitted}></EmailMessage>
+                </form>
               </div>
             </div>
           </div>

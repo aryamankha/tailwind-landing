@@ -2,7 +2,7 @@ import React from "react";
 
 function FeaturesBlocks() {
   return (
-    <section className="relative">
+    <section className="relative h-screen ">
       {/* Section background (needs .relative class on parent and next sibling elements) */}
       <div
         className="absolute inset-0 top-1/2 md:mt-24 lg:mt-0 bg-gray-900 pointer-events-none"
@@ -14,7 +14,12 @@ function FeaturesBlocks() {
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">What makes it Vivid?</h2>
+            <h2 className="h2 mb-4">
+              What makes it{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">
+                Vivid?
+              </span>
+            </h2>
             <p className="text-xl text-gray-600">
               Stop wasting your time. Vivid makes CSS easier than recursive
               depth-first search.{" "}
@@ -138,7 +143,9 @@ function FeaturesBlocks() {
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
                 Modern frameworks
               </h4>
-              <p className="text-gray-600 text-center">Support web apps </p>
+              <p className="text-gray-600 text-center">
+                Build components using Vivid in React styled with Tailwind CSS
+              </p>
             </div>
 
             {/* 4th item */}
@@ -181,10 +188,11 @@ function FeaturesBlocks() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Fast Prototyping
+                Production-ready code
               </h4>
               <p className="text-gray-600 text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Modify your styling in-browser and update your IDE with code
+                that looks like your own
               </p>
             </div>
 
@@ -215,10 +223,10 @@ function FeaturesBlocks() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Design Phase
+                Your workflow
               </h4>
               <p className="text-gray-600 text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Keep using your browser and IDE without needing an extra window
               </p>
             </div>
 
@@ -258,10 +266,11 @@ function FeaturesBlocks() {
                 </g>
               </svg>
               <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">
-                Develop & Launch
+                Inspect smarter
               </h4>
               <p className="text-gray-600 text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Understand and modify the components making up your design with
+                just one click
               </p>
             </div>
           </div>

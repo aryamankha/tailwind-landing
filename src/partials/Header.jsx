@@ -22,30 +22,35 @@ function Header() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Site branding */}
-          <div className="flex-shrink-0 mr-4">
+          <div className="flex-shrink-0 flex flex-row items-center mr-4">
             {/* Logo */}
             <Link to="/" className="block" aria-label="Cruip">
               <img className="w-10 h-10" src="/src/images/favicon.png"></img>
             </Link>
+            <h3 className="h3">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">
+                Vivid
+              </span>
+            </h3>
           </div>
 
           {/* Site navigation */}
           <nav className="flex flex-grow">
             <ul className="flex flex-grow justify-end flex-wrap items-center">
-              <li>
+              {/* <li>
                 <Link
                   to="/signin"
                   className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Sign in
                 </Link>
-              </li>
+    </li> */}
               <li>
-                <Link
-                  to="/signup"
-                  className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
+                <button
+                  onClick={goToEmail}
+                  className="btn rounded-lg text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
                 >
-                  <span>Sign up</span>
+                  <span>Waitlist</span>
                   <svg
                     className="w-3 h-3 fill-current text-gray-400 flex-shrink-0 ml-2 -mr-1"
                     viewBox="0 0 12 12"
@@ -56,7 +61,7 @@ function Header() {
                       fillRule="nonzero"
                     />
                   </svg>
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>
@@ -66,4 +71,10 @@ function Header() {
   );
 }
 
+const goToEmail = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 export default Header;
