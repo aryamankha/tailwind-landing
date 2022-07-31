@@ -4,7 +4,7 @@ import Logo from "../images/favicon.png";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="dark:bg-slate-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Bottom area */}
         <div className="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200">
@@ -62,9 +62,9 @@ function Footer() {
             <Link to="/" className="block" aria-label="Cruip">
               <img className="w-10 h-10" src={Logo}></img>
             </Link>
-            <div className="text-sm ml-4 text-gray-600 mr-4">
+            <p className="text-sm ml-4 text-gray-600 mr-4">
               Made by Vivid. All rights reserved.
-            </div>
+            </p>
           </div>
         </div>
       </div>
