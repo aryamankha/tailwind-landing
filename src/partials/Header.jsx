@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../images/favicon.png";
 
 function Header() {
   const [top, setTop] = useState(true);
@@ -25,7 +26,7 @@ function Header() {
           <div className="flex-shrink-0 flex flex-row items-center mr-4">
             {/* Logo */}
             <Link to="/" className="block" aria-label="Cruip">
-              <img className="w-10 h-10" src="/src/images/favicon.png"></img>
+              <img className="w-10 h-10" src={Logo}></img>
             </Link>
             <h3 className="h3">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-blue-500">

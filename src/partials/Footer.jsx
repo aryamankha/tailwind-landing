@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../images/favicon.png";
 
 function Footer() {
   return (
@@ -57,8 +58,13 @@ function Footer() {
           </ul>
 
           {/* Copyrights note */}
-          <div className="text-sm text-gray-600 mr-4">
-            Made by Vivid. All rights reserved.
+          <div className="flex flex-row items-center">
+            <Link to="/" className="block" aria-label="Cruip">
+              <img className="w-10 h-10" src={Logo}></img>
+            </Link>
+            <div className="text-sm ml-4 text-gray-600 mr-4">
+              Made by Vivid. All rights reserved.
+            </div>
           </div>
         </div>
       </div>
