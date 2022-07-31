@@ -104,7 +104,7 @@ function Newsletter() {
                 </p>
 
                 {/* CTA form */}
-                <form className="w-full lg:w-auto" onSubmit={submitHandler}>
+                <form className="w-full lg:w-auto">
                   <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
                     <input
                       type="email"
