@@ -104,7 +104,7 @@ function Newsletter() {
                 </p>
 
                 {/* CTA form */}
-                <form className="w-full lg:w-auto">
+                <form className="w-full lg:w-auto" onSubmit={submitHandler}>
                   <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:mx-0">
                     <input
                       type="email"
@@ -114,6 +114,7 @@ function Newsletter() {
                     />
                     <a
                       className="btn text-white bg-blue-600 hover:bg-blue-700 shadow"
+                      type="submit"
                       href="#0"
                     >
                       Subscribe
