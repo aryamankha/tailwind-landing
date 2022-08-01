@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../utils/Modal";
+import Landing from "../images/landingPage.png";
 
 import HeroImage from "../images/hero-image.png";
 
