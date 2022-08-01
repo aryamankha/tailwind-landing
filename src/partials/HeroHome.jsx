@@ -107,6 +107,7 @@ function HeroHome() {
                   className="w-full"
                   onSubmit={submitHandler}
                   method="post"
+                  data-netlify="true"
                 >
                   <div className="flex flex-col sm:flex-row justify-center sm:justify-start max-w-xs mx-auto sm:max-w-lg lg:mx-0">
                     <input
@@ -122,7 +123,7 @@ function HeroHome() {
                       type="submit"
                       className="btn rounded-lg ml-2 text-white bg-black hover:bg-blue-600 shadow"
                     >
-                      Subscribe
+                      Waitlist
                     </button>
                   </div>
                   {/* Success message */}
