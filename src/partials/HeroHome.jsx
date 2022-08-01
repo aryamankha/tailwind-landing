@@ -124,9 +124,9 @@ function HeroHome() {
                     <button
                       onClick={() => setEmailSubmitted(true)}
                       type="submit"
-                      className="rounded-lg ml-2 text-white bg-black hover:bg-blue-600 shadow"
+                      className=" btn rounded-lg ml-2 text-white bg-black hover:bg-blue-600 shadow"
                     >
-                      Waitlist
+                      <span className="mx-4">Waitlist</span>
                     </button>
                   </div>
                   {/* Success message */}
