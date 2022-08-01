@@ -9,9 +9,6 @@ function HeroHome() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [email, setEmail] = useState("");
 
-  const scriptUrl =
-    "https://script.google.com/macros/s/AKfycbwmDlr93PdYdyIANtMMTugTCJSuuCa39hvJ0vblPiyg2QjRF2JoWIrFJhnjqQ24f2XRZg/exec";
-
   function EmailMessage(props) {
     const emailSubmitted = props.emailSubmitted;
     if (emailSubmitted) {
@@ -64,7 +61,7 @@ function HeroHome() {
           </g>
         </svg>
       </div>
-
+      <img src={Landing}></img>
       <div className="max-w-7xl md:h-screen mx-auto px-8 justify-center sm:justify-start sm:px-10">
         {/* Hero content */}
         <div className="flex h-screen items-center flex-col lg:flex-row gap-16 pt-32 pb-12 md:pt-40 md:pb-20">
