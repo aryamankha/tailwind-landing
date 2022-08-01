@@ -105,9 +105,7 @@ function HeroHome() {
                 <form
                   name="emailSubmissionForm"
                   className="w-full"
-                  onSubmit={submitHandler}
                   method="post"
-                  data-netlify="true"
                 >
                   <div className="flex flex-col sm:flex-row justify-center sm:justify-start max-w-xs mx-auto sm:max-w-lg lg:mx-0">
                     <input
@@ -118,7 +116,7 @@ function HeroHome() {
                     <input
                       type="email"
                       className="form-input w-full appearance-none bg-slate-50 border border-slate-200 focus:border-slate-400 rounded-lg px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-slate-500 placeholder-gray-500"
-                      placeholder="Your email…"
+                      placeholder="Ex. richard.hendricks@piedpiper.com"
                       aria-label="Your email…"
                       name="email"
                       onChange={(event) => setEmail(event.target.value)}
@@ -126,7 +124,7 @@ function HeroHome() {
                     <button
                       onClick={() => setEmailSubmitted(true)}
                       type="submit"
-                      className="btn rounded-lg ml-2 text-white bg-black hover:bg-blue-600 shadow"
+                      className="rounded-lg ml-2 text-white bg-black hover:bg-blue-600 shadow"
                     >
                       Waitlist
                     </button>
