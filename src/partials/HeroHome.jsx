@@ -103,13 +103,18 @@ function HeroHome() {
               >
                 {/* CTA form */}
                 <form
-                  name="googleSheetsSubmit"
+                  name="emailSubmissionForm"
                   className="w-full"
                   onSubmit={submitHandler}
                   method="post"
                   data-netlify="true"
                 >
                   <div className="flex flex-col sm:flex-row justify-center sm:justify-start max-w-xs mx-auto sm:max-w-lg lg:mx-0">
+                    <input
+                      type="hidden"
+                      name="form-name"
+                      value="emailSubmissionForm"
+                    ></input>
                     <input
                       type="email"
                       className="form-input w-full appearance-none bg-slate-50 border border-slate-200 focus:border-slate-400 rounded-lg px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-slate-500 placeholder-gray-500"
