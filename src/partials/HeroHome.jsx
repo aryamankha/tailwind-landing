@@ -61,7 +61,7 @@ function HeroHome() {
           </g>
         </svg>
       </div>
-      <img src={Landing}></img>
+      <img className="hidden" src={Landing}></img>
       <div className="max-w-7xl md:h-screen mx-auto px-8 justify-center sm:justify-start sm:px-10">
         {/* Hero content */}
         <div className="flex h-screen items-center flex-col lg:flex-row gap-16 pt-32 pb-12 md:pt-40 md:pb-20">
